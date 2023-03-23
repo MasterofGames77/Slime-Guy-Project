@@ -495,12 +495,12 @@ MonoBehaviour:
   fullScreenTog: {fileID: 1661452734}
   vsyncTog: {fileID: 233863630}
   resolutions:
-  - horizontal: 854
-    vertical: 480
-  - horizontal: 1280
-    vertical: 720
   - horizontal: 1920
     vertical: 1080
+  - horizontal: 1280
+    vertical: 720
+  - horizontal: 854
+    vertical: 480
   resolutionLabel: {fileID: 2017943513}
 --- !u!1 &106049687
 GameObject:
@@ -5675,10 +5675,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Use the Arrow Keys (< + >) to move left or right.\n\nUse the Space Bar
-    to Jump.\n\nUse the Escape Button to Pause/Unpause the Game.\n\nJump on the red
-    slimes to defeat them.\n\n If you get hit you'll respawn at the start of the
-    level"
+  m_text: 'Use the Arrow Keys (< + >) to move left or right.
+
+
+    Use the Space
+    Bar to Jump.
+
+
+    Use the Escape Button to Pause/Unpause the Game.
+
+
+    Jump
+    on the red slimes to defeat them.
+
+
+    If you get hit, or fall into a pit,
+
+    you''ll
+    respawn at the start of the level'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 88003508be39e449cb51c48494e680cf, type: 2}
   m_sharedMaterial: {fileID: 21699584260080902, guid: 88003508be39e449cb51c48494e680cf,
@@ -5706,8 +5720,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

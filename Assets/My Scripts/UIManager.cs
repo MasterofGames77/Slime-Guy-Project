@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using Platformer.Mechanics;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEditor.PackageManager;
 
 public class UIManager : MonoBehaviour
 {
