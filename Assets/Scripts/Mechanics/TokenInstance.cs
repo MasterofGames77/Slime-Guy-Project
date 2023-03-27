@@ -50,7 +50,7 @@ namespace Platformer.Mechanics
             //only exectue OnPlayerEnter if the player collides with this token.
             var player = other.gameObject.GetComponent<PlayerController>();
             if (player != null) OnPlayerEnter(player);
-            //uiManager.CollectedGem(pointValue - 1);
+            uiManager.CollectedGem(pointValue++);
 
         }
 

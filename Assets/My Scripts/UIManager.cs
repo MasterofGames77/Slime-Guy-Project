@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI levelTimerText;
 
-    //[SerializeField] private TextMeshProUGUI gemsText;
+    [SerializeField] private TextMeshProUGUI gemsText;
 
     [SerializeField] private GameObject Player;
 
@@ -29,7 +29,7 @@ public class UIManager : MonoBehaviour
 
     private int seconds;
 
-    //private static int gemsCollected;
+    private static int gemsCollected;
 
     private static UIManager uiManagerInstance;
 
@@ -51,11 +51,11 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 1.0f;
         isGameActive = true;
         timeLeft += Time.deltaTime;
-        //gemsCollected = 0;
+        gemsCollected = 0;
         Player.gameObject.SetActive(true);
         timerText.gameObject.SetActive(true);
-       // gemsText.gameObject.SetActive(true);
-       //gemsText.text = $"Gems: " + gemsCollected.ToString();
+        gemsText.gameObject.SetActive(true);
+        gemsText.text = $"Gems: " + gemsCollected.ToString();
         restartButton.gameObject.SetActive(false);
         nextLevelButton.gameObject.SetActive(false);
         quitButton.gameObject.SetActive(false);
@@ -75,12 +75,12 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    /*public void CollectedGem(int gemsToAdd)
+    public void CollectedGem(int gemsToAdd)
     {
         gemsCollected += gemsToAdd;
         gemsText.text = $"Gems: " + gemsCollected.ToString();
         Debug.Log("Gem Collected");
-    }*/
+    }
 
     public void LoadNextLevel()
     {
@@ -91,7 +91,7 @@ public class UIManager : MonoBehaviour
         Debug.Log("The next level has been loaded");
         isGameActive = true;
         Player.gameObject.SetActive(true);
-        //gemsCollected = 0;
+        gemsCollected = 0;
         levelCompleteScreen.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
         nextLevelButton.gameObject.SetActive(false);
@@ -107,7 +107,7 @@ public class UIManager : MonoBehaviour
         Debug.Log("The Scene has been reloaded.");
         isGameActive = true;
         Player.gameObject.SetActive(true);
-        //gemsCollected = 0;
+        gemsCollected = 0;
         levelCompleteScreen.gameObject.SetActive(false);
         restartButton.gameObject.SetActive(false);
         nextLevelButton.gameObject.SetActive(false);
