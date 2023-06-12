@@ -22,6 +22,9 @@ namespace Platformer.Mechanics
         /// Max horizontal speed of the player.
         /// </summary>
         public float maxSpeed = 7;
+
+        public float inertia = 1;
+        public Rigidbody2D rb;
         /// <summary>
         /// Initial jump velocity at the start of a jump.
         /// </summary>
@@ -51,6 +54,7 @@ namespace Platformer.Mechanics
             collider2d = GetComponent<Collider2D>();
             spriteRenderer = GetComponent<SpriteRenderer>();
             animator = GetComponent<Animator>();
+            rb = GetComponent<Rigidbody2D>();
         }
 
         protected override void Update()
@@ -58,6 +62,7 @@ namespace Platformer.Mechanics
             if (controlEnabled)
             {
                 move.x = Input.GetAxis("Horizontal");
+
                 if (jumpState == JumpState.Grounded && Input.GetButtonDown("Jump"))
                     jumpState = JumpState.PrepareToJump;
                 else if (Input.GetButtonUp("Jump"))
