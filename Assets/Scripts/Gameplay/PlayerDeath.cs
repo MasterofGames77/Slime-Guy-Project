@@ -14,6 +14,8 @@ namespace Platformer.Gameplay
     {
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
+        //[SerializeField] private UIManager uiManager;
+
         public override void Execute()
         {
             var player = model.player;
@@ -30,6 +32,8 @@ namespace Platformer.Gameplay
                 player.animator.SetTrigger("hurt");
                 player.animator.SetBool("dead", true);
                 Simulation.Schedule<PlayerSpawn>(2);
+                //uiManager.ResetTimer();
+                Time.timeScale = 1.0f;
             }
         }
     }

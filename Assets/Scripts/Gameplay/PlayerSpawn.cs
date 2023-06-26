@@ -1,6 +1,7 @@
 using Platformer.Core;
 using Platformer.Mechanics;
 using Platformer.Model;
+using System.Numerics;
 
 namespace Platformer.Gameplay
 {
@@ -11,6 +12,8 @@ namespace Platformer.Gameplay
     {
         PlatformerModel model = Simulation.GetModel<PlatformerModel>();
 
+
+        //public static Vector2 lastCheckPointPos;
         public override void Execute()
         {
             var player = model.player;

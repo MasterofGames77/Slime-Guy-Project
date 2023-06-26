@@ -21,14 +21,14 @@ namespace Platformer.Mechanics
         /// <summary>
         /// Max horizontal speed of the player.
         /// </summary>
-        public float maxSpeed = 7;
+        public float maxSpeed = 5;
 
         public float inertia = 1;
         public Rigidbody2D rb;
         /// <summary>
         /// Initial jump velocity at the start of a jump.
         /// </summary>
-        public float jumpTakeOffSpeed = 7;
+        public float jumpTakeOffSpeed = 5;
 
         public JumpState jumpState = JumpState.Grounded;
         private bool stopJump;
